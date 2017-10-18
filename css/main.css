@@ -21,7 +21,8 @@ body {
   border-radius: 2px;
   font-size: .8em;
   letter-spacing: .1px;
-  font-weight: 700; }
+  font-weight: 700;
+  transition: background 0.3s; }
   .menu-toggle:hover {
     cursor: pointer; }
   .menu-toggle .menu-toggle_toggler img {
