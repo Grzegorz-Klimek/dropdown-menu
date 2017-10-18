@@ -1,0 +1,95 @@
+//*******  VARS  *******
+
+$accentColor: #3a94ff;
+$fontBasicColor: #777;
+$mainLightColor: #fefefe;
+
+
+//*******  GLOBAL  *******
+
+body {
+  background: url("../media/main-background.png");
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+//*******  MENU  *******
+
+.menu {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  background: $mainLightColor;
+  color: $fontBasicColor;
+  height: 50px;
+  margin-bottom: 25px;
+  margin-top: 145px;
+  border-radius: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menu-main {
+  display: none;
+  position: relative;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li a{
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      padding-left: 15px;
+      background: white;
+      text-decoration: none;
+      color: $fontBasicColor;
+      transition: background 0.3s;
+      border-bottom: 1px solid darken($mainLightColor, 10%);
+      span.menu-main_ornament {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 50px;
+        background: $accentColor;
+      }
+      &:hover {
+        background: darken($mainLightColor, 4%);
+        span.menu-main_ornament {
+          display: block;
+        }
+      }
+    }
+  }
+  .menu-main_triangle {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent $mainLightColor transparent;
+  }
+}
+//*******  JS CLASSES  *******
+
+.menu-accentcolor {
+  background: $accentColor;
+  color: $mainLightColor;
+}
+
+.menu-visible {
+  display: block;
+}
